@@ -6,7 +6,7 @@ function precmd() {
   if [ $timer ]; then
     timer_show=$(($SECONDS - $timer))
     if [[ $timer_show -ge $min_show_time ]]; then
-      RPROMPT='%{$fg_no_bold[cyan]%} ${timer_show}s %f%{$fg_bold[white]%} %D{%H:%M:%S}'
+      RPROMPT='%{$fg_no_bold[cyan]%} ${timer_show}s %f%{$fg_bold[white]%} %D{%H:%M:%S}%{$RESET%}'
     else
       RPROMPT='%{$fg_bold[white]%}[%*]%f'
     fi
